@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/login" element={<Login isAuthenticated={AuthContext} />} />
+        {/* <Route path="/login" element={<Login isAuthenticated={AuthContext} />} /> */}
       </Routes>
     </div>
   )

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Login({isAuthenticated}) {
+export default function Login({}) {
   const [isAuthenticated, setAuthenticated] = useState(false);
 
   function login() {
