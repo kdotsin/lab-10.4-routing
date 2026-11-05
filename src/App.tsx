@@ -1,13 +1,13 @@
 import NavBar from "./components/NavBar"
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import Blog from "./pages/Blog";
-import Login from "./pages/Login";
-import { createContext, useState } from "react";
+// import Login from "./pages/Login";
+// import { createContext, useState } from "react";
 
 function App() {
-  const AuthContext = createContext(false)
+  // const AuthContext = createContext(false)
   return (
     <div>
       <NavBar />
