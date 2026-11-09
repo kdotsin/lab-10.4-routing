@@ -1,18 +1,8 @@
-import { useState } from "react";
+import { useAuth } from "../auth-context";
 
-export default function Login({}) {
-  const [isAuthenticated, setAuthenticated] = useState(false);
+export default function Login() {
+  const { isAuthenticated, login, logout } = useAuth();
 
-  function login() {
-    setAuthenticated(true);
-    console.log("hello");
-    console.log(isAuthenticated);
-  }
-
-  function logout() {
-    setAuthenticated(false);
-    console.log(isAuthenticated)
-  }
 
   return (
     <div className="flex gap-5">
