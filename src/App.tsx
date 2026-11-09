@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import Blog from "./pages/Blog";
 import Login from "./pages/Login";
+import BlogContent from "./pages/BlogContent";
 // import { createContext, useState } from "react";
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog">
+          <Route index element={<Blog />} />
+          <Route path=":slug" element={<BlogContent />} />
+        </Route>
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>

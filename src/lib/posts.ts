@@ -28,3 +28,7 @@ export const posts: Post[] = [
       "Typing props with interfaces, using generics for reusable components, and leaning on type inference can make your React code safer and easier to maintain.",
   },
 ];
+
+export function findPost(slug: string) {
+  return posts.find((post) => post.slug === slug);
+}
