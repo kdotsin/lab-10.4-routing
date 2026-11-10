@@ -8,14 +8,20 @@ export default function BlogContent() {
   }
   const post = findPost(params.slug);
   return (
-    <div>
+    <div className="pt-10 sm:pt-16">
       {post ? (
-        <div>
-          <h1>{post.title}</h1>
-          <p>{post.content}</p>
-        </div>
+        <article>
+          <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            {post.title}
+          </h1>
+          <p className="mt-8 max-w-prose text-lg leading-relaxed text-ink/85">
+            {post.content}
+          </p>
+        </article>
       ) : (
-        <h1>Post Not Found</h1>
+        <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight text-muted">
+          Post Not Found
+        </h1>
       )}
     </div>
   );

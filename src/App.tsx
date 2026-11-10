@@ -9,19 +9,21 @@ import AuthLayout from "./pages/AuthLayout";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen">
       <NavBar />
-      <Routes>
-        <Route element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/blog">
-            <Route index element={<Blog />} />
-            <Route path=":slug" element={<BlogContent />} />
+      <main className="mx-auto max-w-3xl px-4 pb-24 sm:px-8">
+        <Routes>
+          <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/blog">
+              <Route index element={<Blog />} />
+              <Route path=":slug" element={<BlogContent />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </main>
     </div>
   );
 }
